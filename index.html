@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="constructor.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+</head>
+<body>
+  
+  <nav id="brandbar" class="navbar navbar-dark bg-dark">
+    <span  class="navbar-brand m-1 h1">Library</span>
+  </nav>
+
+  <div id="library-panel" class="d-md-block ">
+    <hr class="sidebarLines">
+    <h3 class="text-center">Information</h1>
+    <hr>
+    <p class="text-center">Number of added books: </p> <p id="total-books" class="text-center">0</p>
+    <p class="text-center">Completed books: </p> <p id="completed-books" class="text-center">0</p>
+    <p class="text-center">Number of read pages: </p> <p id="total-pages" class="text-center">0</p>
+    <p class="text-center">Number of left pages: </p> <p id="left-pages" class="text-center">0</p>
+
+  </div>
+
+ 
+<!-- Button trigger modal -->
+
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <button id="addBookButton" type="button" class="btn btn-primary m-2" data-toggle="modal" data-target="#addBookModal">
+        +
+    </button>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Add book</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="bookTitle">Title:</label>
+                <input type="text" class="form-control" id="bookTitle" required>
+              </div>
+              <div class="form-group">
+                <label for="bookAuthor">Author:</label>
+                <input type="text" class="form-control" id="bookAuthor" required>
+              </div>
+              <div class="form-group">
+                <label for="bookPagesRead">Pages read:</label>
+                <input type="number" class="form-control" id="bookPagesRead" required>
+              </div>
+              <div class="form-group">
+                <label for="bookTotalPages">Total pages:</label>
+                <input type="number" class="form-control" id="bookPagesTotal" required>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" onclick="addBookToLibrary(); return false" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row"> 
+      <div id="addedBooks" class="col">
+        
+      </div> 
+  </div> 
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>

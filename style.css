@@ -1,0 +1,45 @@
+body {
+    background-color: aliceblue;
+
+}
+
+#addBookButton {
+    height: 10vh;
+    width: 10vh;
+    font-size: 30px;
+}
+
+#addBookButton:hover {
+    color: rgb(0, 255, 0);
+}
+
+.single-book {
+    color: white;
+    background-color: black;
+    border-radius: 10%;
+    border: solid;
+    border-color: red;
+    margin: 10px;
+}
+
+#library-panel {
+    background-color: rgb(141, 6, 6);
+    position: fixed;
+    height: 100%;
+    width: 25vh;
+    align-items: flex-end;
+    right: 0;
+    color: white;
+    padding: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#brandbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+}
+
